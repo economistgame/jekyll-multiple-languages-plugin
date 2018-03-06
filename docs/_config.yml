@@ -1,24 +1,16 @@
-name: Flex
-markdown: redcarpet
-highlighter: pygments
-exclude: ["LICENSE.txt", "README.md"]
+# Site meta data
+email: example@example.org
+url: "http://example.org"
 
-baseurl: ""
-permalink: /:title/
+# not used by plugin but by liquid template
+languages: ['en', 'de']
 
+# Build settings
+markdown: kramdown
 
-# Paginate
-paginate: 1
-paginate_path: "/pagination/page:num/"
+gems:
+- jekyll-sitemap
+- jekyll-language-plugin
 
-
-# Plugins
-gems: 
-  - jekyll-multiple-languages-plugin
-  - jekyll-paginate
-
-
-# jekyll-multiple-languages-plugin settings:
-languages: ["it", "en", "es"]
-
-exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
+language_data: data.lang.%%
+language_includes_dir: _i18n
